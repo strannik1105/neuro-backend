@@ -6,11 +6,6 @@ from common.config import settings
 app = FastAPI()
 
 
-@app.on_event("startup")
-def on_startup():
-    pass
-
-
 def main():
     uvicorn.run(
         "main:app",
