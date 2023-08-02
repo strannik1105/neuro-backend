@@ -1,7 +1,7 @@
 from sqlalchemy import Column, String
 from common.db.base_model import BaseModel
 
-USER_SCHEMA = 'user'
+USER_SCHEMA = "user"
 
 
 class User(BaseModel):

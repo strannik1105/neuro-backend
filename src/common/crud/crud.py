@@ -18,8 +18,4 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         return self.get_all_query(db).all()
 
     def get(self, db, *args, sid):
-        return (self.get_all_query(db)
-                .filter(
-            ModelType
-        )
-        )
+        return self.get_all_query(db).filter(ModelType)

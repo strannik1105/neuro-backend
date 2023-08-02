@@ -9,7 +9,7 @@ sys.path = ["", f"{pathlib.Path(__file__).parent.parent}/src"] + sys.path[1:]
 
 from common.db.metadata import target_metadata
 
-URL = 'postgresql://postgres:postgres@localhost/neuro'
+URL = "postgresql://postgres:postgres@localhost/neuro"
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
