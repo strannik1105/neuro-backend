@@ -1,14 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
-
 from common.config import settings
 
 app = FastAPI()
-
-
-@app.on_event("startup")
-def on_startup():
-    pass
 
 
 def main():
@@ -21,5 +15,5 @@ def main():
     )
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
