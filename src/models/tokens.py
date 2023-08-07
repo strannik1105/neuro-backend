@@ -10,12 +10,12 @@ class Tokens(BaseModel):
     __tablename__ = "tokens"
     __table_args__ = {
         "schema": TOKENS_SCHEMA,
-        "comment": "Table with .."
+        "comment": "Table with tokens"
     }
 
     token = Column(String, nullable=False, comment='token', unique=True)
-    group_name = Column()
+    group_name = Column(String, nullable=True, comment='name of group', unique=False)
     user_owner = Column(Integer, ForeignKey("user.sid"), comment="token's owner")
-    workflow_id = Column(Integer, ForeignKey("workflow.sid"))
+    workflow_sid = Column(Integer, ForeignKey("workflow.sid"))
 
     workflow = relationship("Workflow", back_populates="tokens")
