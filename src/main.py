@@ -1,8 +1,10 @@
 import uvicorn
 from fastapi import FastAPI
 from common.config import settings
+from router.api import api_router
 
 app = FastAPI()
+app.include_router(api_router, prefix="/api/v1")
 
 
 def main():
@@ -15,5 +17,5 @@ def main():
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
