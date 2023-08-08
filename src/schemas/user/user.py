@@ -19,3 +19,7 @@ class UserCreate(UserBase):
 
 class UserUpdate(UserBase):
     password: str
+
+
+class UserFilter(UserBase):
+    pass
