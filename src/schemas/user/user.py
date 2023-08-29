@@ -6,7 +6,7 @@ from schemas.core_model import CoreModel
 
 class UserBase(CoreModel):
     name: str
-    email: EmailStr
+    email: str
 
 
 class User(UserBase):
@@ -19,3 +19,7 @@ class UserCreate(UserBase):
 
 class UserUpdate(UserBase):
     password: str
+
+
+class UserFilter(UserBase):
+    pass
